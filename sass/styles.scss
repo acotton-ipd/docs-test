@@ -1,0 +1,45 @@
+body {
+    padding: 20px;
+}
+
+#tag-editor-container {
+    width: 400px;
+    background-color: white;
+    padding: 10px;
+}
+
+.te-input-container {
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.hover-delete {
+    fill: darkred;
+}
+
+.remove-icon:hover {
+  fill: darkred;
+}
+
+.te-tags-container {
+    height: 300px;
+    margin-top: 30px;
+}
+
+.tagrow {
+    border-bottom: 1px solid #ddd;
+    height: 40px;
+    padding: 3px;
+}
+
+md-input-container .md-errors-spacer {
+    min-height: 0;
+    min-width: 1px;
+}
+
+.te-list-item[contenteditable='true'] {
+    &:focus,
+    &:hover {
+        color: blue;
+    }
+}

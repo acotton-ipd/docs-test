@@ -1,0 +1,36 @@
+
+
+<md-whiteframe id="tag-editor-container" class="md-whiteframe-2dp" layout="column">
+      <md-subheader class="md-no-sticky" layout layout-align="center center">Tag Editor</md-subheader>
+
+    <md-input-container class="te-input-container">
+        <label>Search</label>
+        <input ng-model="$ctrl.searchTerm" type="text">
+    </md-input-container>
+
+    <md-input-container class="te-input-container">
+        <label>Add New</label>
+        <input ng-model="$ctrl.newTag" ng-keyup="$event.keyCode == 13 ? $ctrl.addNewTag() : null" type="text">
+    </md-input-container>
+
+    <md-virtual-repeat-container class="te-tags-container">
+        <div  md-virtual-repeat="tag in $ctrl.tags | orderBy:'-order' | filter:{name:$ctrl.searchTerm}"
+              layout="row"
+              layout-align="center center"
+              flex="100"
+              class="tagrow">
+
+            <div>[{{ tag.order }}] &nbsp;</div>
+
+            <div ng-attr-contenteditable="{{ $ctrl.editmode }}" ng-model="tag.name" ng-change="$ctrl.saveTag(tag)" class="md-list-item-text te-list-item" flex="80"></div>
+
+
+              <md-icon
+                ng-click="$ctrl.deleteTag(tag)"
+                class="remove-icon"
+                md-svg-src="./assets/ic_remove_circle_black_24px.svg"></md-icon>
+        </div>
+    </md-virtual-repeat-container>
+</md-whiteframe>
+
+<!-- <md-button class="md-raised" ng-click="reset()">Reset</md-button> -->
