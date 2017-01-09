@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Tutorial: documentation</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Tutorial: documentation</h1>
+
+    <section>
+
+<header>
+    
+
+    <h2>documentation</h2>
+</header>
+
+<article>
+    <p>@ngdoc content
+@name How to write documentation
+@description Documentation</p>
+<h1>Dgeni</h1><ul>
+<li>uses jsdoc (like?) markup parsing</li>
+<li>requires typescript package (see config/index.js)</li>
+<li>requires ngdoc package</li>
+<li>run &gt; <code>gulp dgeni</code> to compile</li>
+</ul>
+<p>https://github.com/angular/dgeni</p>
+<p><strong><a href="https://toddmotto.com/documenting-angular-dgeni">Tod Motto tutorial</a></strong> and <a href="https://github.com/toddmotto/angular-1-5-components-app">source files</a></p>
+<ol>
+<li>install npm dependencies locally w/ --save-dev</li>
+<li>create dir structure</li>
+<li>edit config in config/index.js<ul>
+<li>creates &amp; exports Dgeni package w/required dependencies</li>
+<li>sets paths and source files</li>
+<li><strong>ADD TYPESCRIPT support</strong><ul>
+<li>require typescript package</li>
+<li>include <strong>readTypeScriptModules</strong> to set source input</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>create static docs<ul>
+<li>guides, tutorials, notes, etc...</li>
+</ul>
+</li>
+<li>Dgeni code generated docs will automatically be created and put into content/api</li>
+<li>create Gulp task<ul>
+<li>run w/ <code>gulp dgeni</code></li>
+<li>outputs to docs/build</li>
+<li>write task to clean up /build dir before generating docs</li>
+<li>write task to copy docs/app/* to docs/build/src</li>
+</ul>
+</li>
+<li>create ng app to view doc<ul>
+<li>app.module &amp; app.config</li>
+<li>controllers for api &amp; guide</li>
+<li>index template (just copied to build folder)</li>
+</ul>
+</li>
+<li>Processor for Angular Index Page (index template)<ul>
+<li>config/processors/index-page.js</li>
+<li>add to config/index.js</li>
+</ul>
+</li>
+</ol>
+<p><strong>issues</strong></p>
+<ul>
+<li>TS files are being read but error <code>warn:    No module code found in src/app/app/app.component.ts</code></li>
+<li>TS files are not included in build</li>
+<li>test file that appears in docs/build when .js does not work when changed to .ts</li>
+</ul>
+<p>petebacondarwin <a href="https://github.com/petebacondarwin/dgeni-angular">dgeni-angular example</a></p>
+<p><a href="https://github.com/ericjim/dgeni-typescript-example">dgeni-typescript-example</a></p>
+<p>more about <a href="https://github.com/angular/dgeni-packages">Dgeni packages</a></p>
+<p>&quot;ngdoc - The angular.js specific tag-defs, processors and templates. This loads the jsdoc and nunjucks packages for you.&quot;</p>
+<h2>ngdoc</h2><p><a href="https://github.com/angular/angular.js/wiki/Writing-AngularJS-Documentation">angularjs: Writing AngularJS Documentation</a></p>
+<p><strong><a href="http://www.podpea.co.uk/blog/starting-off-with-ngdocs/">starting off with ngDocs</a></strong></p>
+<p><a href="http://www.chirayuk.com/snippets/angularjs/ngdoc">ngDoc</a></p>
+<p><a href="https://www.npmjs.com/package/gulp-ngdocs">gulp-ngdocs</a></p>
+<p>(from 2014) &quot;The flavour of jsdoc used by AngularJS is called ngdoc and is parsed by a Node.js utility called Dgeni.&quot;</p>
+<h2>typeDoc</h2><p><a href="https://runkit.com/npm/gulp-typedoc">gulp-typedoc</a></p>
+<p><a href="https://github.com/TypeStrong/typedoc">typeDoc github</a></p>
+<p><a href="http://typedoc.org/guides/installation/">typeDoc.org</a></p>
+<h2>other</h2><p><a href="https://blog.cloudflare.com/generating-documentation-for-typescript-projects/">generating documentation for typescript projects</a></p>
+</article>
+
+</section>
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Tutorials</h3><ul><li><a href="tutorial-build.html">build</a></li><li><a href="tutorial-component-architecture.html">component-architecture</a></li><li><a href="tutorial-database.html">database</a></li><li><a href="tutorial-documentation.html">documentation</a></li><li><a href="tutorial-firebase-hosting.html">firebase-hosting</a></li><li><a href="tutorial-form-component.html">form-component</a></li><li><a href="tutorial-index_.html">index</a></li><li><a href="tutorial-jsdoc.html">jsdoc</a></li><li><a href="tutorial-misc.html">misc</a></li><li><a href="tutorial-projects-and-trees.html">projects-and-trees</a></li><li><a href="tutorial-toc.html">toc</a></li></ul><h3>Global</h3><ul><li><a href="global.html#$save">$save</a></li><li><a href="global.html#$watch">$watch</a></li><li><a href="global.html#saveTag">saveTag</a></li><li><a href="global.html#templateUrl">templateUrl</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Jan 09 2017 10:04:55 GMT-0500 (EST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

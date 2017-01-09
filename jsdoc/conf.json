@@ -1,0 +1,23 @@
+{
+	"tags": {
+		"allowUnknownTags": true,
+		"dictionaries": ["jsdoc", "closure"]
+	},
+	"source": {
+    "include": ["../src/app/"],
+		"includePattern": ".+\\.js(doc|x)?$",
+		"excludePattern": "(^|\\/|\\\\)_"
+	},
+  "opts": {
+    "recurse": true,
+    "tutorials": "../tutorials"
+  },
+	"plugins": [
+    "plugins/markdown",
+    "plugins/summarize"
+  ],
+	"templates": {
+		"cleverLinks": false,
+		"monospaceLinks": false
+	}
+}

@@ -1,4 +1,17 @@
-angular.module('app').component('home', {
+/**
+* @file Home or Workspace component
+* @author IPDemons
+* @description The Home components is the app container holding all the pieces of the UI
+* as well as some *'global'* properties.
+*/
+
+ angular.module('app').component('home', {
+
+   /**
+    * @
+    *
+    */
+
     templateUrl: 'home/home.html',
     bindings: {
         groupId: '=groupID'

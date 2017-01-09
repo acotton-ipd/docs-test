@@ -1,3 +1,9 @@
+/**
+* @file tag-editor component
+* @author IPDemons
+* @description The tag-editor component holds all the business logic for this app.
+*/
+
 angular.module('app').component('tagEditor', {
 
     templateUrl: 'tag-editor/tag-editor.html',
@@ -8,14 +14,32 @@ angular.module('app').component('tagEditor', {
         this.editmode = true;
         var that = this;
         var rootRef = firebase.database().ref('groups');
+/**
+* tagsRef Firebase reference to Group's Tags
+* @type {string}
+*/
         var tagsRef = rootRef.child(that.groupID).child('tags');
 
+/**
+* Watch for change in groupID to switch branches in Firebase
+* @method $watch
+* @description AngularFire method, necessary for 2-way bindings
+* @param {string} groupID group ID sent from Home component
+*/
         $scope.$watch('$ctrl.groupID', function() {
             tagsRef = rootRef.child(that.groupID).child('tags');
             that.tags = $firebaseArray(tagsRef.orderByChild('order'));
         })
 
+/**
+* Save Tag to Firebase
+* @param {object} tag Tag object to be saved
+*/
         this.saveTag = function(tag) {
+/**
+* @method $save
+* @description AngularFire method saves object to Firebase Ref
+*/
             this.tags.$save(tag);
         }
 

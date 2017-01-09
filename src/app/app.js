@@ -1,7 +1,9 @@
 /**
- * This is ther basic Tag Editor Angular app
- *
- */
+* @file Tag Editor App module definition
+* @author IPDemons
+* @description App definition, configs and directives are found here.  These would later be broken out into multiple files, but for a small app like this we're fine.
+*/
+
 
 var app = angular
 	.module('app', ['firebase', 'ngMaterial'])
