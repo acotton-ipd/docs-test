@@ -1,0 +1,13 @@
+{
+  "name": "tearout-form",
+  "version": false,
+  "dependencies": {},
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160819155010",
+    "angular-component-router": "registry:dt/angular-component-router#1.5.0+20160815132122",
+    "angularfire": "registry:dt/angularfire#0.8.2+20160707221224",
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160602141504",
+    "firebase": "registry:dt/firebase#2.4.1+20160510002910",
+    "jquery": "registry:dt/jquery#1.10.0+20160704162008"
+  }
+}
