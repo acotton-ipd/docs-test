@@ -5,7 +5,7 @@
 	},
 	"source": {
     "include": ["../src/app/"],
-		"includePattern": ".+\\.js(doc|x)?$",
+		"includePattern": ".+\\.ts(doc|x)?$",
 		"excludePattern": "(^|\\/|\\\\)_"
 	},
   "opts": {
